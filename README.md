@@ -22,3 +22,10 @@ now move on to the settings.py file and add app and rest apis: [settings.py](htt
 
 * I have also added a .gitignore file to ignore our venv or virtual environment file for further necessity.
 
+
+# How To Run Courier-Service-Rest Project SUCCESSFULLY
+
+* First clone the project from our github repo 
+```
+git clone https://github.com/Mohammad-Rakibuzzaman/courier-service-api.git
+```
