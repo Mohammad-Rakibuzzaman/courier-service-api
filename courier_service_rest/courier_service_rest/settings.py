@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
-
+# timedelta is used for date and time arithmetic. It represents a duration, the difference between two dates or times.
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,6 +28,7 @@ SECRET_KEY = 'django-insecure-tn9z&s@n6p2-mg8y7(zzsg+ui(lyrlj-i(tp2wo2lf$&xvh7*3
 DEBUG = True
 
 ALLOWED_HOSTS = []
+APPEND_SLASH = False
 
 
 # Application definition
@@ -73,6 +74,7 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME_LATE_USER': timedelta(days=1),
     'SLIDING_TOKEN_LIFETIME_LATE_USER': timedelta(days=30),
 }
+# The JWT token will expire after 60 minutes. The token will be refreshed if the user is active within 1 day. If the user is inactive for more than 1 day, the token will expire after 30 days.
 
 
 MIDDLEWARE = [

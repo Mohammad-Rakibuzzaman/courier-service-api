@@ -20,13 +20,14 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
-
+# The `urlpatterns` list routes URLs to views.
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('package_tracker.urls')),
 ]
-
+# The `urlpatterns` list routes URLs to views.
 urlpatterns += [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
+# The `urlpatterns` list routes URLs to views.

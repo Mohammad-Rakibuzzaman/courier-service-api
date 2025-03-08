@@ -1,7 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 
-# Create your models here.
+
+# Created our main model here.
 class Package(models.Model):
     STATUS_CHOICES = [
         ('pending', 'Pending'),
@@ -23,6 +25,8 @@ class Package(models.Model):
     def soft_delete(self):
         self.deleted_at = timezone.now()
         self.save()
+
+    #timezone.now() ensures that the deletion timestamp is saved using the correct timezone
 
     class Meta:
         ordering = ['-created_at']
